@@ -1,0 +1,51 @@
+/*! Dstyle RESET CSS : ver 2015713 */
+@charset "UTF-8";
+/* 
+ * Dstyle RESET CSS
+ * create by won yong bong (A.K.A dstyle) 
+ * License: none (public domain) 
+ */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,
+sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,
+header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+// td사이의 간격 없앰. 
+table{border-collapse:collapse;border-spacing:0;}
+// 배경은 투명 , 커서는 손가락모양, 마우스오버시 밑줄 추가.
+a,button{background:transparent;cursor:pointer;}
+a:hover{text-decoration:underline;}
+// dt는 본래는 인라인블럭 이나, 그냥 블럭으로 처리해버림.
+dt{display:block;}
+//과거 브라우저가 HTML5요소를 인식못하는걸 적용.
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body,html{
+	width:100%; // 좌우크기를 위해서 적용.
+	background:#fff; // 배경 적용 리셋
+}
+// 리스트아이템 사용안함.
+ol,ul{list-style:none;}
+// 텍스트 위아래 간격을 위해서 넣음.
+body{line-height:1;}
+// 모질라 브라우저 버튼 간격 없애기.
+button::-moz-focus-inner,input::-moz-focus-inner {border: 0;padding: 0;}
+// 체크박스 및 라디오버튼은 기본 사이즈 인식 및 가운데정렬
+input[type="checkbox"],input[type="radio"] {box-sizing: border-box;padding: 0;vertical-align: middle;}
+// 글씨 굵게 미리적용
+optgroup,h1,h2,h3,h4,h5,h6,b,strong {font-weight:700;}
+// 이미지 기본 보더 삭제
+img {border: 0;}
+// 문단 구분선은 안보이도록 정의
+hr{display:none;}
+// 테이블의 caption은 TTS 처리.
+caption{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
+// 모바일에서 접근시 폰트사이즈가 임의변경되는걸 막음
+html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+// 버튼이지만 기능이 없을때(disabled) 마우스 모양은 기본모양으로 보여줌
+button[disabled],html input[disabled] {cursor: default;}
+// pre 태그로 감쌌을때 넘어가면 보이지 않는것을 스크롤링하여 보여줌
+pre {overflow: auto;}
+// input중 정확한 사이즈 적용을 위하여 box-sizing 적용함 (IE8+)
+input[type=text],input[type=password]{box-sizing:border-box;}

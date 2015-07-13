@@ -1,0 +1,16 @@
+{
+  "name": "PublicFoPublish_EC",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-less": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "",
+    "grunt-autoprefixer":"",
+    "less-plugin-autoprefix":"",
+    "less-plugin-clean-css":""
+  }
+}
+
