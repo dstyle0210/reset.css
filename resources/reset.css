@@ -191,6 +191,7 @@ pre {
   overflow: auto;
 }
 input[type=text],
-input[type=password] {
-  box-sizing: border-box;
+input[type=password],
+textarea {
+  box-sizing: content-box;
 }
