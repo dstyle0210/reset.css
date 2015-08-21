@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*
+ * Base CSS
+ * 해당 프로젝트에서 기본적으로 사용할 기본설정들을 저장함.
+ */
+/*! 박스요소 설정 */
+body{font-size:12px;font-family:"나눔고딕";line-height:18px;}
+/*! 폰트요소 설정 */
+a{color:#666;}
+a:hover{text-decoration:underline;color:#666;}
+/*! 입력요소 설정 */
+input[type=text], input[type=password]{box-sizing:border-box;padding:3px;height:25px;border:1px solid #ccc;font-family:"나눔고딕";color:#666;}
+textarea{box-sizing:border-box;padding:3px;border:1px solid #ccc;font-family:"나눔고딕";color:#666;}
+input[type=radio], input[type=checkbox]{box-sizing:border-box;height:25px;}
+select{box-sizing:border-box;height:25px;border:1px solid #ccc;font-family:"나눔고딕";color:#666;line-height:25px;}
+select *{vertical-align:top;}
+/*! 기본지정 클래스 */
+.tts{position:absolute;clip:rect(0, 0, 0, 0);margin:-1px;padding:0;width:1px;height:1px;overflow:hidden;border:0;}
+.leftSec{float:left;}
+.rightSec{float:right;}
+.clearfix:after, .clearfix:before, .clfix:after, .clfix:before{display:table;content:"";line-height:0;}
+.text-overflow{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;zoom:1;}
+span.text-overflow, a.text-overflow{display:inline-block;}
