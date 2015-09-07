@@ -40,7 +40,8 @@ img {border: 0;}
 // 문단 구분선은 안보이도록 정의
 hr{display:none;}
 // 테이블의 caption은 TTS 처리.
-caption{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
+// 과거형 caption{position: absolute;width: 1px;height: 1px;margin: -1px;padding: 0;overflow: hidden;clip: rect(0,0,0,0);border: 0;}
+caption{width: 0;height: 0;margin: 0;padding: 0; visibility:hidden;}
 // 모바일에서 접근시 폰트사이즈가 임의변경되는걸 막음
 html {-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
 // 버튼이지만 기능이 없을때(disabled) 마우스 모양은 기본모양으로 보여줌
