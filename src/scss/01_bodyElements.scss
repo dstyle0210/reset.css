@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import "./_lib/val.scss";
+/*
+* @File Name : 01_bodyElements.scss
+* @author : Dstyle
+* @Description : body 하위 공통 CSS
+*
+* @Modification Information
+*
+* 수정일 : 수정자 : 수정내용
+* ------------------------
+* 2018.11.07 : Dstyle : 최초생성
+*/
+/*! Dstyle Reset : body */
+body *{box-sizing:border-box;} // [매우중요] 모든요소 box-sizing 적용.

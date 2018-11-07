@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@import "./_lib/val.scss";
+/*
+* @File Name : 01_bodyElements.scss
+* @author : Dstyle
+* @Description : body 하위 공통 CSS
+*
+* @Modification Information
+*
+* 수정일 : 수정자 : 수정내용
+* ------------------------
+* 2018.11.07 : Dstyle : 최초생성
+*/
+/*! Dstyle Reset : form Elements */
+// 폼요소 포커스 라인 제거
+textarea,input, select{outline:0;}
+
+// 셀렉트요소
+select{border:$form-border;font-size:$form-font-size;padding:$form-padding;
+  &:disabled{background-color:$form-background-disabled;}
+}
+
+// 텍스트 입력영역
+textarea{padding:$form-padding;font-size:$form-font-size;line-height:$form-line-height;border:$form-border;background-color:$form-background-enabled;
+  &:disabled{background-color:$form-background-disabled;}
+  &:read-only{background-color:$form-background-readonly;}
+}
+
+// 입력요소(텍스트) 레이아웃 커스텀
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=file] {padding:$form-padding;font-size:$form-font-size;line-height:$form-line-height;height:$form-line-height;border:$form-border;color:$form-color;
+  &:disabled{background-color:$form-background-disabled;}
+  &:read-only{background-color:$form-background-readonly;}
+}
+
+// 라디오,체크박스 레이아웃 커스텀
+input[type=radio],
+input[type=checkbox] { margin:0; width:$form-check-size;height:$form-check-size; vertical-align:middle;}
+
+// 버튼요소 레이아웃 커스텀
+input[type=button],
+input[type=reset],
+input[type=submit],
+input[type=image],
+button { overflow:visible; background:$form-background-button;color:$form-color-button; cursor:pointer;padding:$form-padding;font-size:$form-font-size;line-height:$form-font-size; height:$form-button-height; border:$form-border;}

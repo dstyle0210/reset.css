@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+/*! Dstyle Reset : form Elements */
+input,select,textarea{outline:0}
+select{padding:3px 5px;border:1px solid #ccc;font-size:13px}
+input[type=email]:disabled,input[type=file]:disabled,input[type=number]:disabled,input[type=password]:disabled,input[type=tel]:disabled,input[type=text]:disabled,input[type=url]:disabled,select:disabled,textarea:disabled{background-color:#f4f6f7}
+textarea{padding:3px 5px;border:1px solid #ccc;font-size:13px;line-height:25px;background-color:#fff}
+input[type=email]:read-only,input[type=file]:read-only,input[type=number]:read-only,input[type=password]:read-only,input[type=tel]:read-only,input[type=text]:read-only,input[type=url]:read-only,textarea:read-only{background-color:#ebebe4}
+input[type=email],input[type=file],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url]{padding:3px 5px;height:25px;border:1px solid #ccc;font-size:13px;color:#666;line-height:25px}
+input[type=checkbox],input[type=radio]{margin:0;width:18px;height:18px;vertical-align:middle}
+button,input[type=button],input[type=image],input[type=reset],input[type=submit]{padding:3px 5px;height:25px;overflow:visible;border:1px solid #ccc;font-size:13px;color:#fff;line-height:13px;cursor:pointer;background:#666}

@@ -1,0 +1,14 @@
+
+// FORM elements
+$form-font-size:13px; // 폼요소 기본글자 사이즈
+$form-line-height:25px; // 폼요소 자평
+$form-border:1px solid #ccc; // 입력요소 보더라인
+$form-color:#666; // 글자컬러
+$form-padding:3px 5px 3px 5px; // 입력요소의 내부간격
+$form-background-enabled:#fff; // 입력가능 상태일때 배경컬러
+$form-background-disabled:#f4f6f7; // 입력불가능 상태일때 배경컬러
+$form-background-readonly:#ebebe4; // 읽기전용 상태일때 배경컬러
+$form-background-button:#666; // 버튼요소의 배경컬러
+$form-color-button:#fff; // 글자컬러
+$form-check-size:18px; // 체크요소(radio , checkbox)의 가로,세로값
+$form-button-height:$form-line-height; // 버튼요소의 높이값
