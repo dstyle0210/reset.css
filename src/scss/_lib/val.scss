@@ -1,6 +1,12 @@
 
+// 기초변수(변경금지)
+$BASE-FONT-SIZE : 13px; // 웹사이트 기본 폰트사이즈
+$BASE-LINE-HEIGHT : 18px; // 웹사이트 기본 자평
+$BASE-FONT-COLOR : #666; // 웹사이트 기본 폰트컬러
+$BASE-FONT-FAMILY : ""; // 웹사이트 기본 폰트패밀리
+
 // FORM elements
-$form-font-size:13px; // 폼요소 기본글자 사이즈
+$form-font-size:$BASE-FONT-SIZE; // 폼요소 기본글자 사이즈
 $form-line-height:25px; // 폼요소 자평
 $form-border:1px solid #ccc; // 입력요소 보더라인
 $form-color:#666; // 글자컬러

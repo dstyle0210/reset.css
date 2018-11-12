@@ -2,4 +2,6 @@
 
 
 /*! Dstyle Reset : body */
+body,html{font-size:13px;line-height:18px}
+body{-webkit-text-size-adjust:none}
 body *{box-sizing:border-box}

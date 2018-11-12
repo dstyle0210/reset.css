@@ -1,0 +1,14 @@
+/*
+// 셀렉트 박스 커스텀
+select.custom-type0{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background:#fff url('/mc_images/common/ico/icoSelectDownArrow.png') no-repeat right 50%;
+  background-size:28px 10px;
+  line-height:1;
+}
+select.custom-type0::-ms-expand { // IE 화살표 삭제
+  display: none;
+}
+ */

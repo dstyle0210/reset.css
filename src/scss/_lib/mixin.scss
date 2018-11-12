@@ -1,0 +1,39 @@
+// 숫자형태로 변경
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1); // 단위에 0을 곱하면, 수치가 0인 단위가 되고, 해당에 1값을 더하면 수치가 1인 단위가 된다. (즉 1px 또는 1rem 또는 1% 처럼)
+}
+
+
+
+// MIXIN
+@mixin makeCanvas($w,$h){
+  $gap : percentage($h/$w);
+  >span.thumb{display:block;position:relative;width:100%;padding-top:$gap;overflow:hidden;
+    >img{position:absolute;top:0;left:0;width:100%;height:100%;}
+  }
+}
+
+@mixin clearfix{
+  *zoom: 1;&:before,&:after {display: table;content: "";line-height: 0;}&:after {clear: both;}
+}
+@mixin text-indent($wid){
+  text-indent:rem($wid * -1px);
+  padding-left:rem($wid);
+}
+@mixin flex-box(){
+  // FLEX 레이아웃 선언.
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  // 렌더링 버그 해결
+  transform:translate3d(0,0,0);
+  -webkit-transform:translate3d(0,0,0);
+}
+@mixin flex-item($col:1){
+  @if $col!=0{  -webkit-box-flex:$col;-webkit-flex:$col;flex:$col;  };
+  display:block; // Android 4.4.2 일 경우, display:inline-block 은 flex을 인식하지 못하여 block으로 교체함.
+  width:100%; // Android 4.4.2 일 경우, 자식의 사이즈 비율에 따라 FLEX가 적용되어, 동일 비율로 적용.
+}
+@mixin text-overflow(){
+  box-sizing:border-box;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;zoom:1;
+}

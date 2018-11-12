@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "./_lib/val.scss";
+@import "./_lib/mixin.scss";
 /*
 * @File Name : 01_bodyElements.scss
 * @author : Dstyle
@@ -12,4 +13,6 @@
 * 2018.11.07 : Dstyle : 최초생성
 */
 /*! Dstyle Reset : body */
+html{font-size:$BASE-FONT-SIZE;line-height:$BASE-LINE-HEIGHT;}
+body{font-size:$BASE-FONT-SIZE;line-height:$BASE-LINE-HEIGHT;-webkit-text-size-adjust:none;}
 body *{box-sizing:border-box;} // [매우중요] 모든요소 box-sizing 적용.
