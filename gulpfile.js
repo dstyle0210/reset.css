@@ -16,10 +16,8 @@ var sass = require('gulp-sass');
 var csso = require('gulp-csso');
 var csscomb = require('gulp-csscomb');
 var replace = require('gulp-replace');
+var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
-var concatStream = false;
-
-
 
 // gulp value setting
 var gval = {}
@@ -36,7 +34,7 @@ gval.css = {
 
 gulp.task("default",function(callback) {
     runSequence("scss:build", "scss:watch", function () {
-        console.log(getTimeStamp() + "WORKSPACE READY!");
+        console.log("["+getTimeStamp() + "] 업무 진행준비가 되었습니다.");
     });
 });
 
@@ -44,37 +42,39 @@ gulp.task("scss:build",function(){
     return pipeLineScss(gulp.src([gval.scss.src],{"base":gval.scss.base}) , gval.scss.dist);
 });
 
-gulp.task("scss:watch",function() {
-    return gulp.watch([scss]).on("change",function(file){
+gulp.task("scss:watch",function(){
+    return gulp.watch([gval.scss.src]).on("change",function(file){
         var name = path.parse(file.path).base;
         pipeLineScss( gulp.src(file.path,{"base":gval.scss.base}) , gval.scss.dist);
-        console.log(getTimeStamp() + " [scss:watch] "+name+" changed");
+        console.log(getTimeStamp() + " [scss:watch] "+name+" 가 변경되었습니다.");
     });
 });
 
-gulp.task("css:concat",function() {
-    return gulp.src([gval.css.src])
-        .pipe(concat("reset.css"))
-        .pipe(csso({restructure: false}))
+gulp.task("css:dist",function() {
+    runSequence("css:reset", "css:common", function () {
+        console.log("["+getTimeStamp() + "] 모든 CSS가 배포 되었습니다.");
+    });
+});
+
+gulp.task("css:reset",function(){
+    return pipeLineCSS( gulp.src([gval.css.base+"/00_reset.css"]).pipe(rename("reset.dstyle.css")) );
+});
+
+gulp.task("css:common",function() {
+    return pipeLineCSS( gulp.src([gval.css.src]).pipe(concat("common.dstyle.css")) );
+});
+
+function pipeLineCSS(gulpFile){
+    return gulpFile
         .pipe(replace('@charset "UTF-8";',''))
         .pipe(replace('@charset "utf-8";',''))
+        .pipe(csso({restructure: false}))
         .pipe(insert.prepend('@charset "UTF-8";\n'))
         .pipe(replace(/}/g,'}\n'))
         .pipe(replace('/*!','\n/*!'))
         .pipe(replace('{.','{\n\t.'))
         .pipe(gulp.dest(gval.css.dist));
-});
-
-gulp.task("css:minify",function() {
-    return gulp.src([gval.css.src])
-        .pipe(concat("reset.min.css"))
-        .pipe(replace('@charset "UTF-8";',''))
-        .pipe(replace('@charset "utf-8";',''))
-        .pipe(replace('/*!','/*'))
-        .pipe(csso({restructure: false}))
-        .pipe(insert.prepend('@charset "UTF-8";\n/* Dstyle reset.css , minify by '+getDateStamp()+'*/\n'))
-        .pipe(gulp.dest(gval.css.dist));
-});
+}
 
 function pipeLineScss(gulpFile , dest){
     return gulpFile.pipe(sass().on('error', sass.logError))
